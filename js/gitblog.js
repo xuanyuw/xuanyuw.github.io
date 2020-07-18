@@ -446,10 +446,10 @@ var gitblog = function(config) {
 
             var editor_content = document.getElementById('write-field');
             if (comment.login == false) {
-                editor_content.innerHTML = '<textarea placeholder="(Publish your comment)" title="Please log in to comment" disabled id="comment-input"></textarea>';
+                editor_content.innerHTML = '<textarea placeholder="(Write your comments here)" title="Please log in to comment" disabled id="comment-input"></textarea>';
                 $('.gitment-editor-submit').attr("disabled", true);
             } else {
-                editor_content.innerHTML = '<textarea placeholder="(Publish your comment)" id="comment-input"></textarea>';
+                editor_content.innerHTML = '<textarea placeholder="(Write your comments here)" id="comment-input"></textarea>';
                 $('.gitment-editor-submit').attr("disabled", false);
             }
 
