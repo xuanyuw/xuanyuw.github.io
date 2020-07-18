@@ -431,9 +431,9 @@ var gitblog = function(config) {
 
             var login = document.getElementById('login');
             if (comment.login == false) {
-                login.innerHTML = '<a class="gitment-editor-login-link" id="log">登入</a> with GitHub';
+                login.innerHTML = '<a class="gitment-editor-login-link" id="log">Log in</a> with GitHub';
             } else {
-                login.innerHTML = '<a class="gitment-editor-login-link" id="log">登出</a>';
+                login.innerHTML = '<a class="gitment-editor-login-link" id="log">Log out</a>';
             }
 
             document.getElementById('log').onclick = function() {
@@ -446,10 +446,10 @@ var gitblog = function(config) {
 
             var editor_content = document.getElementById('write-field');
             if (comment.login == false) {
-                editor_content.innerHTML = '<textarea placeholder="(发表评论)" title="请登入以发表评论" disabled id="comment-input"></textarea>';
+                editor_content.innerHTML = '<textarea placeholder="(Publish your comment)" title="Please log in to comment" disabled id="comment-input"></textarea>';
                 $('.gitment-editor-submit').attr("disabled", true);
             } else {
-                editor_content.innerHTML = '<textarea placeholder="(发表评论)" id="comment-input"></textarea>';
+                editor_content.innerHTML = '<textarea placeholder="(Publish your comment)" id="comment-input"></textarea>';
                 $('.gitment-editor-submit').attr("disabled", false);
             }
 
@@ -489,7 +489,7 @@ var gitblog = function(config) {
                         window.localStorage.setItem('authorize', btoa(data.login + ':' + window.localStorage.access_token));
                     },
                     error: function() {
-                        console.log("用户信息过期，退出登录状态");
+                        console.log("User infotmation expired, Logged out");
                         comment.logout();
                     }
                 });
@@ -508,9 +508,9 @@ var gitblog = function(config) {
             var preview_content = document.getElementById('preview-content');
             var comment_input = document.getElementById('comment-input').value;
             if (comment_input == "") {
-                preview_content.innerHTML = '（没有预览）';
+                preview_content.innerHTML = '(No Preview)';
             } else {
-                preview_content.innerHTML = '预览加载中';
+                preview_content.innerHTML = 'Loading Preview';
                 $.ajax({
                     type: "post",
                     url: 'https://api.github.com/markdown',
@@ -631,7 +631,7 @@ var gitblog = function(config) {
                 success: function(data) {
                     if (self.options.q == undefined || self.options.q == null) {
                         if (data.length == 0) {
-                            document.getElementById('issue-list').innerHTML = '这个人很勤快但这里什么都还没写~';
+                            document.getElementById('issue-list').innerHTML = 'Construction in progress... Vroom Vroom';
                             $('.footer').css('position', 'absolute');
                         } else {
                             issue.addItem(data);
