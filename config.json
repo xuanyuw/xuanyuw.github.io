@@ -11,10 +11,11 @@
         "state": "open"
     },
     "menu": {
-        "首页":"./"
+        "Home":"./",
+        "Paper Thoughts":"https://xuanyuw.github.io/issue_per_label.html?label=Paper%20Thoughts"
     },
     "friends": {
-        
+
     },
     "icons": {
         "Github" : {
