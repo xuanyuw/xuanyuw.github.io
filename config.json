@@ -12,7 +12,8 @@
     },
     "menu": {
         "Home":"./",
-        "Thoughts":"https://xuanyuw.github.io/issue_per_label.html?label=Paper%20Thoughts"
+        "Thoughts":"https://xuanyuw.github.io/issue_per_label.html?label=Paper%20Thoughts",
+        "Notes":"https://xuanyuw.github.io/issue_per_label.html?label=Comp%20Neuro%20Notes%20Coursera"
     },
     "friends": {
 
