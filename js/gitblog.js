@@ -725,14 +725,14 @@ var gitblog = function(config) {
         init: function() {
             $('.navi-button').click(function() {
                 if ($('.main').css("transform") == "matrix(1, 0, 0, 1, 0, 0)") {
-                    $('.main').css("transform", "translateX(-150px)");
+                    $('.main').css("transform", "translateX(-200px)");
                     $('.main-navication span').css("opacity", "1");
                     $('.main-navication').css("opacity", "1");
                     $('.main-navication span').css("transform", "translateX(-10px)");
-                    $('.navi-button').css("transform", "translateX(-150px)");
-                    $('.Totop').css("transform", "translateX(-150px)");
-                    $('.search').css("transform", "translateX(-150px)");
-                    $('.search-input').css("transform", "translateX(-150px)");
+                    $('.navi-button').css("transform", "translateX(-200px)");
+                    $('.Totop').css("transform", "translateX(-200px)");
+                    $('.search').css("transform", "translateX(-200px)");
+                    $('.search-input').css("transform", "translateX(-200px)");
                 }
             });
 
